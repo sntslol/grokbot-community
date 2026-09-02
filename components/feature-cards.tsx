@@ -1,22 +1,22 @@
 const cards = [
   {
     title: "Online, every day",
-    body: "Discord and the newsletter are the home base. Ask, show work, and catch what shipped without a product landing in the way.",
+    body: "Discord and the newsletter are the home base. Ask, show work, and catch what shipped.",
     kicker: "Discord",
   },
   {
     title: "Arizona, in person",
-    body: "A local Grok Bot community in the Valley. Meetups when we have them. Empty calendar stays empty — we do not invent nights.",
+    body: "A local Grok Bot community in the Valley. Meetups when we have them. Empty calendar stays empty.",
     kicker: "AZ",
   },
   {
     title: "News that is actually news",
-    body: "Latest posts live at /news, from the same table as the newsletter. Two sources, one list.",
+    body: "Latest posts live at /news, from the same list as the newsletter.",
     kicker: "News",
   },
   {
     title: "Bots in the wild",
-    body: "This site is for people running Grok Bot, not a download page. Compare notes. Steal prompts. Show up.",
+    body: "This site is for people running Grok Bot. Compare notes. Steal prompts. Show up.",
     kicker: "Community",
   },
 ];
@@ -29,8 +29,7 @@ export function FeatureCards() {
           A community, not a storefront
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-[17px] leading-7 text-fog">
-          Online plus Arizona. Centered on Grok Bot. If you want workshops, a
-          course, or an agency, that is one door: bots.how.
+          Online plus Arizona. Centered on Grok Bot.
         </p>
         <div className="mt-14 grid gap-5 md:grid-cols-2">
           {cards.map((card) => (
