@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { GuideGroupList, GuideItemCard } from "@/components/guide-catalog";
 import { listGuideGroups } from "@/lib/guides";
 
@@ -7,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Guides",
-  description: "Vetted Grok Bot guides, grouped by type.",
+  description: "How people actually run Grok Bot.",
   alternates: { canonical: "/guides" },
 };
 
@@ -25,11 +24,7 @@ export default async function GuidesPage() {
           Guides
         </h1>
         <p className="mt-4 max-w-2xl text-[17px] leading-7 text-fog">
-          Grouped by type. Templates live on{" "}
-          <Link href="/templates" className="text-primary hover:underline">
-            /templates
-          </Link>
-          . We do not list marketplaces.
+          How people actually run Grok Bot.
         </p>
         <GuideGroupList sections={teams} />
         {extra.length > 0 ? (

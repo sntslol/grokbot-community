@@ -50,7 +50,7 @@ export async function GuidesSection({
               Vetted templates
             </h2>
             <p className="mt-3 max-w-xl text-[17px] leading-7 text-fog">
-              Grouped by type. Marketplace dumps stay out.
+              Bots worth stealing.
             </p>
           </div>
           <Link href="/templates" className="text-sm font-medium text-primary hover:underline">

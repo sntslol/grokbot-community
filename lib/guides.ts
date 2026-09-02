@@ -35,7 +35,7 @@ export const teamGuideGroups: GuideGroupMeta[] = [
     collection: "teams",
     id: "engineering",
     title: "Engineering",
-    blurb: "Playbooks for building with Grok Bot.",
+    blurb: "How engineers run a Bot team.",
   },
   {
     collection: "teams",
@@ -47,25 +47,25 @@ export const teamGuideGroups: GuideGroupMeta[] = [
     collection: "teams",
     id: "design",
     title: "Design",
-    blurb: "Playbooks for designing with Grok Bot.",
+    blurb: "More ideas. Taste stays yours.",
   },
   {
     collection: "teams",
     id: "gtm",
     title: "GTM",
-    blurb: "Go-to-market with Grok Bot.",
+    blurb: "Prospecting, decks, and a GTM roster.",
   },
   {
     collection: "teams",
     id: "product",
     title: "Product",
-    blurb: "Playbooks for PMs.",
+    blurb: "A PM with a team that reports to them.",
   },
   {
     collection: "teams",
     id: "field",
     title: "Field Engineering",
-    blurb: "Field / customer engineering.",
+    blurb: "Last call, and what product is building.",
   },
 ];
 
@@ -74,19 +74,19 @@ export const templateGuideGroups: GuideGroupMeta[] = [
     collection: "templates",
     id: "builders",
     title: "Builders",
-    blurb: "Make Bots and plugins.",
+    blurb: "Bots that make Bots, and the plugins they need.",
   },
   {
     collection: "templates",
     id: "engineering",
     title: "Engineering",
-    blurb: "Outer loop and project teams.",
+    blurb: "Who runs the agents, who owns the board.",
   },
   {
     collection: "templates",
     id: "ops",
     title: "Ops",
-    blurb: "Inbox, money, and the rest of the roster.",
+    blurb: "Mail, money, and the rest of the roster.",
   },
 ];
 
@@ -218,7 +218,7 @@ const guides: Guide[] = [
     source: "Lauren · @poteto",
     date: "2026-09-01",
     excerpt:
-      "Wraps an API into a Cursor/Agent Plugin (MCP + skills). Data shape first, smallest scaffold that works.",
+      "Point it at an API. Get a plugin.",
   },
   {
     slug: "dr-eggbot",
@@ -230,7 +230,7 @@ const guides: Guide[] = [
     source: "Lauren · @poteto",
     date: "2026-08-30",
     excerpt:
-      "Designs high-quality Grok Bots. Coding ones get the poteto-mode bar. Routine health check in v0.2.",
+      "Designs a Grok Bot you’d actually run.",
   },
   {
     slug: "loops",
@@ -242,7 +242,7 @@ const guides: Guide[] = [
     source: "Matt Palmer",
     date: "2026-08-28",
     excerpt:
-      "Engineering outer loop over coding agents. Gather, prompt, launch, review, merge. You name the repo; it never guesses.",
+      "Gather, prompt, launch, review, merge. You name the repo.",
   },
   {
     slug: "projects-manager",
@@ -254,7 +254,7 @@ const guides: Guide[] = [
     source: "Eric Zakariasson",
     date: "2026-08-28",
     excerpt:
-      "Notion is source of truth. One project row, one channel, specialists claim work. Does not do specialist work.",
+      "One project, one channel. Specialists claim the work.",
   },
   {
     slug: "loom",
@@ -276,7 +276,7 @@ const guides: Guide[] = [
     href: "https://x.ai/bot/BXDRX1jaURkI4Tx70zLg6",
     source: "Lauren · @poteto",
     date: "2026-08-30",
-    excerpt: "Finds money already owed. Never send, never pay.",
+    excerpt: "Finds money you’re owed. Never sends, never pays.",
   },
   {
     slug: "jobs",
@@ -287,7 +287,7 @@ const guides: Guide[] = [
     href: "https://x.ai/bot/LqFDQ8zlNLQqlFP_vvzs_",
     source: "Lauren · @poteto",
     date: "2026-08-30",
-    excerpt: "Feature editor. 1–3 ideas. Never code.",
+    excerpt: "Picks 1–3 things to build. Never writes the code.",
   },
   {
     slug: "share-templates",
@@ -299,7 +299,7 @@ const guides: Guide[] = [
     source: "@bot",
     date: "2026-08-28",
     excerpt:
-      "The official Grok Bot post on sharing a Bot as a template. Start here.",
+      "How to share a Bot as a template.",
   },
   {
     slug: "benln-internal-use-cases",
