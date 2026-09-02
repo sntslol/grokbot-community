@@ -8,6 +8,7 @@ const groups = [
     title: "Community",
     links: [
       { href: "/news", label: "News" },
+      { href: "/guides", label: "Guides" },
       { href: "/meetups", label: "Meetups" },
       { href: "/#newsletter", label: "Newsletter" },
       { href: site.discord, label: "Discord", external: true },

@@ -1,4 +1,5 @@
 import { AgencyCta } from "@/components/agency-cta";
+import { GuidesSection } from "@/components/guides-section";
 import { FeatureCards } from "@/components/feature-cards";
 import { Hero } from "@/components/hero";
 import { MeetupsSection } from "@/components/meetups-section";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <FeatureCards />
+      <GuidesSection limit={3} />
       <MeetupsSection limit={4} />
       <NewsletterSection />
       <AgencyCta />
