@@ -8,6 +8,7 @@ const nav = [
   { href: "/news", label: "News" },
   { href: "/meetups", label: "Meetups" },
   { href: "/guides", label: "Guides" },
+  { href: "/templates", label: "Templates" },
   { href: "/#newsletter", label: "Newsletter" },
 ];
 

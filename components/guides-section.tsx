@@ -53,8 +53,8 @@ export async function GuidesSection({
               Grouped by type. Marketplace dumps stay out.
             </p>
           </div>
-          <Link href="/guides" className="text-sm font-medium text-primary hover:underline">
-            All guides
+          <Link href="/templates" className="text-sm font-medium text-primary hover:underline">
+            All templates
           </Link>
         </div>
 
