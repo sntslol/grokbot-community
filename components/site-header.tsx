@@ -37,10 +37,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <MobileNav items={nav} />
           <a href={site.discord} className={cn(buttonVariants({ size: "sm" }))}>
             Join Discord
           </a>
+          <MobileNav items={nav} />
         </div>
       </div>
     </header>
