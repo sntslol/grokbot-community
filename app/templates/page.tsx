@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { GuideGroupList, GuideItemCard } from "@/components/guide-catalog";
+import { GuideItemCard } from "@/components/guide-catalog";
+import { TemplateCatalog } from "@/components/template-catalog";
 import { listGuideGroups } from "@/lib/guides";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
 export default async function TemplatesPage() {
   const templates = await listGuideGroups("templates");
   const more = await listGuideGroups("also");
-  const share = more.flatMap((section) => section.items).filter((item) => item.slug === "share-templates");
+  const share = more
+    .flatMap((section) => section.items)
+    .filter((item) => item.slug === "share-templates");
+  const items = templates.flatMap((section) => section.items);
 
   return (
     <div className="px-5 py-20">
@@ -33,7 +37,7 @@ export default async function TemplatesPage() {
             ))}
           </ul>
         ) : null}
-        <GuideGroupList sections={templates} />
+        <TemplateCatalog items={items} />
       </div>
     </div>
   );
