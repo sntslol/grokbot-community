@@ -1,3 +1,4 @@
+import { AgencyCta } from "@/components/agency-cta";
 import { FeatureCards } from "@/components/feature-cards";
 import { Hero } from "@/components/hero";
 import { MeetupsSection } from "@/components/meetups-section";
@@ -12,6 +13,7 @@ export default function Home() {
       <FeatureCards />
       <MeetupsSection limit={4} />
       <NewsletterSection />
+      <AgencyCta />
     </>
   );
 }
