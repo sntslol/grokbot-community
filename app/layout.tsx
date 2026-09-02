@@ -9,7 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Meet Grok Bot — Community",
+    default: "Grok Bot Community",
     template: "%s · Grok Bot Community",
   },
   description: site.description,
@@ -17,19 +17,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/grok-bot.svg", type: "image/svg+xml" }, { url: "/favicon.ico" }],
   },
   openGraph: {
     type: "website",
     url: site.url,
     siteName: site.name,
-    title: "Meet Grok Bot — Community",
+    title: "Grok Bot Community",
     description: site.description,
     images: [{ url: site.ogImage, width: 1920, height: 1080 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meet Grok Bot — Community",
+    title: "Grok Bot Community",
     description: site.description,
     images: [site.ogImage],
   },
