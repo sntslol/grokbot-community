@@ -17,7 +17,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/grok-bot.svg", type: "image/svg+xml" }, { url: "/favicon.ico" }],
+    icon: [
+      { url: "/grok-bot.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/grok-bot.svg",
   },
   openGraph: {
     type: "website",

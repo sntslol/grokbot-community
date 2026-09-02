@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { GrokBotMark } from "@/components/grok-bot-mark";
 import { HeroViewport } from "@/components/hero-viewport";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { buttonVariants } from "@/components/ui/button";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -49,20 +48,6 @@ export function Hero() {
           <Link href="/#newsletter" className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}>
             Get the newsletter
           </Link>
-        </div>
-
-        <a
-          href={site.tails}
-          className={cn(buttonVariants({ variant: "gold", size: "lg" }), "mt-3")}
-        >
-          Go further on bots.how
-        </a>
-        <p className="mt-2 max-w-sm text-center text-[13px] leading-5 text-fog">
-          Workshops, the course, agency work, and membership. Community stays free.
-        </p>
-
-        <div className="mt-8 w-full max-w-md">
-          <NewsletterForm id="hero-email" compact />
         </div>
 
         <HeroViewport />
