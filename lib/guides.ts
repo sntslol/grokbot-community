@@ -113,18 +113,6 @@ const allGuideGroups = [
 
 const guides: Guide[] = [
   {
-    slug: "grok-bot-for-engineering",
-    title: "Grok Bot for Engineering",
-    kind: "guide",
-    collection: "teams",
-    group: "engineering",
-    href: "https://x.com/i/article/2090147220838588416",
-    source: "Lingxi Li · @lingxi",
-    date: "2026-08-31",
-    excerpt:
-      "SpaceXAI engineer building Grok Bot with Grok Bot; a highly capable engineering intern that can manage coding agents.",
-  },
-  {
     slug: "how-i-run-multiple-teams-of-grok-bots",
     title: "How I run multiple teams of Grok Bots",
     kind: "official",
@@ -146,6 +134,19 @@ const guides: Guide[] = [
     date: "2026-08-25",
     excerpt:
       "Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank'em.",
+  },
+
+  {
+    slug: "grok-bot-for-engineering",
+    title: "Grok Bot for Engineering",
+    kind: "guide",
+    collection: "teams",
+    group: "engineering",
+    href: "https://x.com/i/article/2090147220838588416",
+    source: "Lingxi Li · @lingxi",
+    date: "2026-08-31",
+    excerpt:
+      "SpaceXAI engineer building Grok Bot with Grok Bot; a highly capable engineering intern that can manage coding agents.",
   },
   {
     slug: "grok-bot-for-support",
