@@ -1,6 +1,5 @@
-export type GuideKind = "official" | "template" | "guide";
-export type GuideCollection = "templates" | "teams" | "also";
-export type TemplateGroupId = "builders" | "engineering" | "ops";
+export type GuideCollection = "teams" | "templates" | "also";
+
 export type TeamGroupId =
   | "engineering"
   | "support"
@@ -8,40 +7,206 @@ export type TeamGroupId =
   | "gtm"
   | "product"
   | "field";
+export type TemplateGroupId = "builders" | "engineering" | "ops";
 export type AlsoGroupId = "more";
+export type GuideGroupId = TeamGroupId | TemplateGroupId | AlsoGroupId;
 
 export type Guide = {
   slug: string;
   title: string;
-  kind: GuideKind;
+  kind: "official" | "template" | "guide";
   collection: GuideCollection;
-  group: TemplateGroupId | TeamGroupId | AlsoGroupId;
+  group: GuideGroupId;
   href: string;
   source: string;
   date: string;
   excerpt: string;
 };
 
-export const templateGroups = [
-  { id: "builders" as const, title: "Builders", blurb: "Make Bots and plugins." },
-  { id: "engineering" as const, title: "Engineering", blurb: "Outer loop and project teams." },
-  { id: "ops" as const, title: "Ops", blurb: "Inbox, money, and the rest of the roster." },
+type GuideGroupMeta = {
+  collection: GuideCollection;
+  id: GuideGroupId;
+  title: string;
+  blurb: string;
+};
+
+export const teamGuideGroups: GuideGroupMeta[] = [
+  {
+    collection: "teams",
+    id: "engineering",
+    title: "Engineering",
+    blurb: "Playbooks for building with Grok Bot.",
+  },
+  {
+    collection: "teams",
+    id: "support",
+    title: "Support",
+    blurb: "Tickets and talking to users.",
+  },
+  {
+    collection: "teams",
+    id: "design",
+    title: "Design",
+    blurb: "Playbooks for designing with Grok Bot.",
+  },
+  {
+    collection: "teams",
+    id: "gtm",
+    title: "GTM",
+    blurb: "Go-to-market with Grok Bot.",
+  },
+  {
+    collection: "teams",
+    id: "product",
+    title: "Product",
+    blurb: "Playbooks for PMs.",
+  },
+  {
+    collection: "teams",
+    id: "field",
+    title: "Field Engineering",
+    blurb: "Field / customer engineering.",
+  },
 ];
 
-export const teamGuideGroups = [
-  { id: "engineering" as const, title: "Engineering", blurb: "Playbooks for building with Grok Bot." },
-  { id: "support" as const, title: "Support", blurb: "Tickets, and talking to users." },
-  { id: "design" as const, title: "Design", blurb: "Playbooks for designing with Grok Bot." },
-  { id: "gtm" as const, title: "GTM", blurb: "Go-to-market with Grok Bot." },
-  { id: "product" as const, title: "Product", blurb: "Playbooks for PMs." },
-  { id: "field" as const, title: "Field Engineering", blurb: "Customer and field engineering." },
+export const templateGuideGroups: GuideGroupMeta[] = [
+  {
+    collection: "templates",
+    id: "builders",
+    title: "Builders",
+    blurb: "Make Bots and plugins.",
+  },
+  {
+    collection: "templates",
+    id: "engineering",
+    title: "Engineering",
+    blurb: "Outer loop and project teams.",
+  },
+  {
+    collection: "templates",
+    id: "ops",
+    title: "Ops",
+    blurb: "Inbox, money, and the rest of the roster.",
+  },
 ];
 
-export const alsoGroups = [
-  { id: "more" as const, title: "Also vetted", blurb: "Share a template, plus earlier team notes." },
+export const alsoGuideGroups: GuideGroupMeta[] = [
+  {
+    collection: "also",
+    id: "more",
+    title: "Also vetted",
+    blurb: "How to share, and how teams run.",
+  },
+];
+
+export const guideCollections = [
+  { id: "teams" as const, title: "Guides", groups: teamGuideGroups },
+  { id: "templates" as const, title: "Templates", groups: templateGuideGroups },
+  { id: "also" as const, title: "Also vetted", groups: alsoGuideGroups },
+];
+
+const allGuideGroups = [
+  ...teamGuideGroups,
+  ...templateGuideGroups,
+  ...alsoGuideGroups,
 ];
 
 const guides: Guide[] = [
+  {
+    slug: "grok-bot-for-engineering",
+    title: "Grok Bot for Engineering",
+    kind: "guide",
+    collection: "teams",
+    group: "engineering",
+    href: "https://x.com/i/article/2090147220838588416",
+    source: "Lingxi Li · @lingxi",
+    date: "2026-08-31",
+    excerpt:
+      "SpaceXAI engineer building Grok Bot with Grok Bot; a highly capable engineering intern that can manage coding agents.",
+  },
+  {
+    slug: "how-i-run-multiple-teams-of-grok-bots",
+    title: "How I run multiple teams of Grok Bots",
+    kind: "official",
+    collection: "teams",
+    group: "engineering",
+    href: "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
+    source: "Eric Zakariasson",
+    date: "2026-08-27",
+    excerpt: "Each project gets a channel, a roster, and a Notion board.",
+  },
+  {
+    slug: "grok-bot-for-mobile-app-development",
+    title: "Grok Bot for mobile app development",
+    kind: "official",
+    collection: "teams",
+    group: "engineering",
+    href: "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
+    source: "Ryan Perry",
+    date: "2026-08-25",
+    excerpt:
+      "Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank'em.",
+  },
+  {
+    slug: "grok-bot-for-support",
+    title: "Grok Bot for Support",
+    kind: "guide",
+    collection: "teams",
+    group: "support",
+    href: "https://x.com/i/article/2091670020506206209",
+    source: "David Gan · @davidgan",
+    date: "2026-08-28",
+    excerpt:
+      "Support is a time suck and the best place to talk to users; thousands of tickets a day at SpaceXAI.",
+  },
+  {
+    slug: "designing-grok-bot-with-grok-bot",
+    title: "Designing Grok Bot with Grok Bot",
+    kind: "official",
+    collection: "teams",
+    group: "design",
+    href: "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
+    source: "John Bai",
+    date: "2026-08-24",
+    excerpt:
+      "How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop.",
+  },
+  {
+    slug: "grok-bot-for-gtm",
+    title: "Grok Bot for GTM",
+    kind: "official",
+    collection: "teams",
+    group: "gtm",
+    href: "https://x.ai/bot/guides/grok-bot-for-gtm",
+    source: "Krista Letz",
+    date: "2026-08-16",
+    excerpt:
+      "How I use Grok Bot for Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team.",
+  },
+  {
+    slug: "grok-bot-for-pms",
+    title: "Grok Bot for PMs",
+    kind: "official",
+    collection: "teams",
+    group: "product",
+    href: "https://x.ai/bot/guides/grok-bot-for-pms",
+    source: "@n2parko",
+    date: "2026-08-15",
+    excerpt:
+      "For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run.",
+  },
+  {
+    slug: "grok-bot-for-field-engineering",
+    title: "Grok Bot For Field Engineering",
+    kind: "guide",
+    collection: "teams",
+    group: "field",
+    href: "https://x.com/i/article/2094446659380076545",
+    source: "George Reyes · @inkburr",
+    date: "2026-08-31",
+    excerpt:
+      "Field Engineering for 10 years; the role is internal aggregation of information — last call, what product is building.",
+  },
   {
     slug: "tinkabot",
     title: "tinkabot",
@@ -124,99 +289,6 @@ const guides: Guide[] = [
     excerpt: "Feature editor. 1–3 ideas. Never code.",
   },
   {
-    slug: "how-i-run-multiple-teams",
-    title: "How I run multiple teams of Grok Bots",
-    kind: "official",
-    collection: "teams",
-    group: "engineering",
-    href: "https://x.ai/bot/guides/how-i-run-multiple-teams-of-grok-bots",
-    source: "Eric Zakariasson",
-    date: "2026-08-27",
-    excerpt: "Each project gets a channel, a roster, and a Notion board.",
-  },
-  {
-    slug: "grok-bot-for-mobile",
-    title: "Grok Bot for mobile app development",
-    kind: "official",
-    collection: "teams",
-    group: "engineering",
-    href: "https://x.ai/bot/guides/grok-bot-for-mobile-app-development",
-    source: "Ryan Perry",
-    date: "2026-08-25",
-    excerpt: "Six bots, one mobile game studio. How I use Grok Bot to build, ship, and improve Rank’em.",
-  },
-  {
-    slug: "grok-bot-for-engineering",
-    title: "Grok Bot for Engineering",
-    kind: "guide",
-    collection: "teams",
-    group: "engineering",
-    href: "https://x.com/i/article/2090147220838588416",
-    source: "Lingxi Li · @lingxi",
-    date: "2026-08-31",
-    excerpt:
-      "A SpaceXAI engineer building Grok Bot with Grok Bot. Treat it as a capable intern that can manage coding agents.",
-  },
-  {
-    slug: "grok-bot-for-support",
-    title: "Grok Bot for Support",
-    kind: "guide",
-    collection: "teams",
-    group: "support",
-    href: "https://x.com/i/article/2091670020506206209",
-    source: "David Gan · @davidgan",
-    date: "2026-08-28",
-    excerpt: "Support is a time suck, and the best place to talk to users. Thousands of tickets a day.",
-  },
-  {
-    slug: "designing-grok-bot",
-    title: "Designing Grok Bot with Grok Bot",
-    kind: "official",
-    collection: "teams",
-    group: "design",
-    href: "https://x.ai/bot/guides/designing-grok-bot-with-grok-bot",
-    source: "John Bai",
-    date: "2026-08-24",
-    excerpt:
-      "How a designer uses always-on Grok Bot agents to explore more ideas, work with real production assets, and keep judgment in the loop.",
-  },
-  {
-    slug: "grok-bot-for-gtm",
-    title: "Grok Bot for GTM",
-    kind: "official",
-    collection: "teams",
-    group: "gtm",
-    href: "https://x.ai/bot/guides/grok-bot-for-gtm",
-    source: "Krista Letz",
-    date: "2026-08-16",
-    excerpt:
-      "Enterprise GTM at SpaceXAI: a Chief of Staff, prospecting and account prompts, live slides, and the rest of the team.",
-  },
-  {
-    slug: "grok-bot-for-pms",
-    title: "Grok Bot for PMs",
-    kind: "official",
-    collection: "teams",
-    group: "product",
-    href: "https://x.ai/bot/guides/grok-bot-for-pms",
-    source: "@n2parko",
-    date: "2026-08-15",
-    excerpt:
-      "For the first time, a PM can have a team that reports to them. Attention lists, shipping software, and the bots I actually run.",
-  },
-  {
-    slug: "grok-bot-for-field-engineering",
-    title: "Grok Bot For Field Engineering",
-    kind: "guide",
-    collection: "teams",
-    group: "field",
-    href: "https://x.com/i/article/2094446659380076545",
-    source: "George Reyes · @inkburr",
-    date: "2026-08-31",
-    excerpt:
-      "The job is aggregating what was said on the last call and what product is building. Ten years in the field.",
-  },
-  {
     slug: "share-templates",
     title: "Share templates",
     kind: "official",
@@ -225,7 +297,8 @@ const guides: Guide[] = [
     href: "https://x.com/bot/status/2093376523919323618",
     source: "@bot",
     date: "2026-08-28",
-    excerpt: "The official Grok Bot post on sharing a Bot as a template. Start here.",
+    excerpt:
+      "The official Grok Bot post on sharing a Bot as a template. Start here.",
   },
   {
     slug: "benln-internal-use-cases",
@@ -257,37 +330,23 @@ export async function listGuides() {
   return guides.slice();
 }
 
-function sectionsFor<T extends { id: string }>(
-  items: Guide[],
-  metas: T[],
-  collection: GuideCollection,
-  ids?: Array<T["id"]>,
+export async function listGuideGroups(
+  collection?: GuideCollection,
+  groupIds?: readonly GuideGroupId[],
 ) {
-  const wanted = ids ?? metas.map((meta) => meta.id);
+  const items = await listGuides();
+  const catalog = collection
+    ? allGuideGroups.filter((group) => group.collection === collection)
+    : allGuideGroups;
+  const wanted = groupIds ?? catalog.map((group) => group.id);
   const sections = [];
-  for (const id of wanted) {
-    const meta = metas.find((group) => group.id === id);
-    if (!meta) continue;
-    const grouped = items.filter((item) => item.collection === collection && item.group === id);
+  for (const meta of catalog) {
+    if (!wanted.includes(meta.id)) continue;
+    const grouped = items.filter(
+      (item) => item.collection === meta.collection && item.group === meta.id,
+    );
     if (grouped.length === 0) continue;
     sections.push({ ...meta, items: grouped });
   }
   return sections;
-}
-
-export async function listTemplateGroups(ids?: TemplateGroupId[]) {
-  return sectionsFor(await listGuides(), templateGroups, "templates", ids);
-}
-
-export async function listTeamGuideGroups(ids?: TeamGroupId[]) {
-  return sectionsFor(await listGuides(), teamGuideGroups, "teams", ids);
-}
-
-export async function listAlsoGroups() {
-  return sectionsFor(await listGuides(), alsoGroups, "also");
-}
-
-/** Homepage templates only. */
-export async function listGuideGroups(ids?: TemplateGroupId[]) {
-  return listTemplateGroups(ids);
 }

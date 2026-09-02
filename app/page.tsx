@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <FeatureCards />
-      <GuidesSection groups={["builders", "engineering"]} />
+      <GuidesSection collection="templates" groups={["builders", "engineering"]} />
       <MeetupsSection limit={4} />
       <NewsletterSection />
       <AgencyCta />
