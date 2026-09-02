@@ -17,7 +17,6 @@ const kindLabel = {
   guide: "Guide",
 } as const;
 
-const INDEX_HREF = "https://x.com/benln/status/2094775808602546335";
 
 export default async function GuidesPage() {
   const collections = await Promise.all(
@@ -34,16 +33,7 @@ export default async function GuidesPage() {
           Templates and guides
         </h1>
         <p className="mt-4 max-w-2xl text-[17px] leading-7 text-fog">
-          Grouped by type, from{" "}
-          <a
-            href={INDEX_HREF}
-            target="_blank"
-            rel="noreferrer"
-            className="text-jet underline decoration-fog/50 underline-offset-4 hover:decoration-jet dark:text-paper dark:hover:decoration-paper"
-          >
-            Ben Lang&apos;s 6-team index
-          </a>
-          . We do not list marketplaces.
+          Grouped by type. We do not list marketplaces.
         </p>
         <div className="mt-12 space-y-16">
           {collections.map((collection) => (
