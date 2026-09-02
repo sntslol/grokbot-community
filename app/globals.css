@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("https://cdn.grok.com/_next/static/media/UniversalSans_Display_400.p.0wwhol2x4qvj6.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("https://cdn.grok.com/_next/static/media/UniversalSans_Display_550.p.1d_5desmfkuzx.woff2") format("woff2");
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Text";
+  src: url("https://cdn.grok.com/_next/static/media/UniversalSans_Text_400.p.0kzgqcuw2bgx3.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Text";
+  src: url("https://cdn.grok.com/_next/static/media/UniversalSans_Text_550.p.2oz54pkhn1rbr.woff2") format("woff2");
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --paper: #f4f4f4;
+  --card: #1a1a1a;
+  --ivory: #1a1a1a;
+  --jet: #f4f4f4;
+  --fog: #9a9a9a;
+  --dove: #2a2a2a;
+  --primary: #0094ff;
+  --primary-hover: #33a9ff;
+  --primary-foreground: #ffffff;
+  --gold: #fec901;
+  --sunset: #e31c23;
+  --cream: #f5d5a8;
+  --color-scheme: dark;
+}
+
+html.light {
+  --bg: #ffffff;
+  --paper: #ffffff;
+  --card: #f9f8f6;
+  --ivory: #f9f8f6;
+  --jet: #0a0a0a;
+  --fog: #7d8187;
+  --dove: #d5d9e2;
+  --primary: #0068b3;
+  --primary-hover: #0094ff;
+  --primary-foreground: #ffffff;
+  --gold: #fec901;
+  --sunset: #e31c23;
+  --cream: #f5d5a8;
+  --color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ivory: var(--ivory);
+  --color-jet: var(--jet);
+  --color-fog: var(--fog);
+  --color-dove: var(--dove);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-gold: var(--gold);
+  --color-sunset: var(--sunset);
+  --color-cream: var(--cream);
+  --font-sans: "Universal Sans Text", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+  --font-display: "Universal Sans Display", ui-sans-serif, system-ui, sans-serif;
+  --font-text: "Universal Sans Text", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: var(--color-scheme);
+}
+
+body {
+  background: var(--bg);
+  color: var(--jet);
+  font-family: var(--font-text);
+  font-feature-settings: "ss01" on;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 24%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.dark .grok-bot-mark__eye {
+  fill: #0a0a0a;
+}
+
+html.light .grok-bot-mark__eye {
+  fill: #ffffff;
+}
