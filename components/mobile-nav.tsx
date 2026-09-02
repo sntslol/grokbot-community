@@ -25,13 +25,16 @@ export function MobileNav({ items }: { items: NavItem[] }) {
     <div className="md:hidden">
       <button
         type="button"
-        className={cn(buttonVariants({ variant: "secondary", size: "icon" }), "size-9")}
+        className={cn(
+          buttonVariants({ variant: "outline", size: "icon" }),
+          "size-9 border-jet/30 text-jet dark:border-paper/50 dark:bg-transparent dark:text-paper",
+        )}
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
       >
-        {open ? <X className="size-4" strokeWidth={2} /> : <Menu className="size-4" strokeWidth={2} />}
+        {open ? <X className="size-5" strokeWidth={2} /> : <Menu className="size-5" strokeWidth={2} />}
       </button>
       {open ? (
         <div
