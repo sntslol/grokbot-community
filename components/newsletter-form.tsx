@@ -70,12 +70,12 @@ export function NewsletterForm({
             if (status !== "idle" && status !== "loading") setStatus("idle");
           }}
           placeholder="you@company.com"
-          className="h-11 min-w-0 flex-1 rounded-full border border-dove bg-paper px-4 text-[15px] text-jet outline-none placeholder:text-fog focus:border-primary dark:border-white/15 dark:bg-card dark:text-paper"
+          className="h-12 min-h-12 min-w-0 flex-1 appearance-none rounded-full border border-dove bg-paper px-5 text-base leading-normal text-jet outline-none placeholder:text-fog focus:border-primary dark:border-white/30 dark:bg-bg dark:text-paper dark:placeholder:text-fog"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className={cn(buttonVariants({ size: compact ? "default" : "default" }), "shrink-0")}
+          className={cn(buttonVariants({ size: "lg" }), "h-12 w-full shrink-0 sm:w-auto")}
         >
           {status === "loading" ? "Joining…" : "Get updates"}
         </button>
