@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <FeatureCards />
-      <GuidesSection limit={3} />
+      <GuidesSection limit={8} />
       <MeetupsSection limit={4} />
       <NewsletterSection />
       <AgencyCta />
