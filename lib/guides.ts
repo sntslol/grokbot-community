@@ -29,16 +29,6 @@ const guides: Guide[] = [
     excerpt:
       "Engineering outer loop over coding agents. Gather, prompt, launch, review, merge. You name the repo; it never guesses.",
   },
-  {
-    slug: "share-install-vet",
-    title: "How to share, install, and vet templates",
-    kind: "guide",
-    href: "https://www.aibuilderclub.com/blog/grok-bot-templates",
-    source: "AI Builder Club",
-    date: "2026-08-30",
-    excerpt:
-      "What a template carries, what it leaves behind, and how to install a third-party Bot without getting burned.",
-  },
 ];
 
 export async function listGuides() {
