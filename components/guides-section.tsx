@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { listGuideGroups, type Guide } from "@/lib/guides";
+import { listTemplateGroups, type Guide, type TemplateGroupId } from "@/lib/guides";
 import { formatDate } from "@/lib/utils";
 
 const kindLabel = {
@@ -35,9 +35,9 @@ function GuideCard({ item }: { item: Guide }) {
 export async function GuidesSection({
   groups,
 }: {
-  groups?: Array<Guide["group"]>;
+  groups?: TemplateGroupId[];
 }) {
-  const sections = await listGuideGroups(groups);
+  const sections = await listTemplateGroups(groups);
 
   return (
     <section id="guides" className="px-5 py-24">
@@ -63,7 +63,7 @@ export async function GuidesSection({
         ) : (
           <div className="mt-12 space-y-14">
             {sections.map((section) => (
-              <div key={section.id}>
+              <div key={`templates-${section.id}`}>
                 <h3 className="font-[family-name:var(--font-display)] text-[24px] font-[550] tracking-[-0.4px] text-jet dark:text-paper">
                   {section.title}
                 </h3>
