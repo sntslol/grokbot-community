@@ -11,8 +11,7 @@ export function NewsletterSection() {
           Drops, meetups, and Bot news
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[17px] leading-7 text-fog">
-          Short notes when something ships. No drip sequence. Workshops and the
-          agency stay at bots.how.
+          Short notes when something ships. No drip sequence.
         </p>
         <div className="mx-auto mt-8 max-w-md text-left">
           <NewsletterForm id="newsletter-email" />

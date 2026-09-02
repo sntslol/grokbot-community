@@ -7,30 +7,19 @@ import { buttonVariants } from "@/components/ui/button";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-function LinuxMark() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M12.2 2.1c.7 0 1.5.6 1.8 1.8.2.8.1 1.7-.2 2.6-.2.5.1.6.4.8 1.7 1.1 2.9 3 3.2 5.2.2 1.3 0 2.5-.6 3.6 1.3.5 2.2 1.5 2.5 2.8.3 1.3 0 2.6-.9 3.5-.8.8-2 1.3-3.3 1.3-.7 0-1.4-.2-2-.5-.6 1.4-1.8 2.3-3.2 2.3-1.2 0-2.2-.7-2.8-1.8-.6.3-1.3.5-2 .5-1.3 0-2.5-.5-3.3-1.3-.9-.9-1.2-2.2-.9-3.5.3-1.3 1.2-2.3 2.5-2.8-.6-1.1-.8-2.3-.6-3.6.3-2.2 1.5-4.1 3.2-5.2.3-.2.6-.3.4-.8-.3-.9-.4-1.8-.2-2.6.3-1.2 1.1-1.8 1.8-1.8.5 0 .9.3 1.1.7.2-.4.6-.7 1.1-.7Z"
-      />
-    </svg>
-  );
-}
-
 export function Hero() {
   return (
     <section className="px-5 pb-8 pt-16 sm:pt-20">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
         <Link
-          href="/news"
+          href="/meetups"
           className="mb-8 inline-flex items-center overflow-hidden rounded-full border border-dove bg-ivory text-[13px] dark:border-white/10 dark:bg-card"
         >
           <span className="bg-sunset px-2.5 py-1 font-[family-name:var(--font-text)] text-[11px] font-medium tracking-[0.06em] text-white">
-            EARLY BETA
+            AZ + ONLINE
           </span>
           <span className="flex items-center gap-2 px-3 py-1 text-fog">
-            Grok Bot is here · Read the launch post
+            Meetups in Arizona, Discord everywhere
             <span className="inline-flex size-5 items-center justify-center rounded-full border border-dove dark:border-white/15">
               <ArrowUpRight className="size-3" strokeWidth={2} />
             </span>
@@ -47,36 +36,30 @@ export function Hero() {
         </h1>
 
         <p className="mt-5 max-w-xl text-pretty text-[17px] leading-7 text-fog">
-          AI teammates you can give real work to. This is the community — news,
-          meetups, and Discord. Hire, workshops, and the agency live at bots.how.
+          The community for people who run Grok Bot. Online, and on the ground in
+          Arizona. News, meetups, the newsletter, and a Discord that actually talks
+          about the work.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
-          <Link
-            href="/#download"
-            className={cn(buttonVariants({ size: "lg" }))}
-          >
-            <LinuxMark />
-            Download for Linux
-          </Link>
-          <Link
-            href="/#newsletter"
-            className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-          >
+          <a href={site.discord} className={cn(buttonVariants({ size: "lg" }))}>
+            <DiscordGlyph />
+            Join the Discord
+          </a>
+          <Link href="/#newsletter" className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}>
             Get the newsletter
           </Link>
-          <a href={site.tails} className={cn(buttonVariants({ variant: "gold", size: "lg" }))}>
-            Workshops & agency
-          </a>
         </div>
 
         <a
-          href={site.discord}
-          className="mt-4 inline-flex items-center gap-2 rounded-full border border-dove px-4 py-2 text-sm text-jet transition-colors hover:bg-ivory dark:border-white/15 dark:text-paper dark:hover:bg-white/5"
+          href={site.tails}
+          className={cn(buttonVariants({ variant: "gold", size: "lg" }), "mt-3")}
         >
-          <DiscordGlyph />
-          Join the Discord
+          Go further on bots.how
         </a>
+        <p className="mt-2 max-w-sm text-center text-[13px] leading-5 text-fog">
+          Workshops, the course, agency work, and membership. Community stays free.
+        </p>
 
         <div className="mt-8 w-full max-w-md">
           <NewsletterForm id="hero-email" compact />
