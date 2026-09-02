@@ -311,6 +311,29 @@ const guides: Guide[] = [
     date: "2026-09-02",
     excerpt: "Designs in Figma with real components.",
   },
+
+  {
+    slug: "motion-god",
+    title: "Motion God",
+    kind: "template",
+    collection: "templates",
+    group: "engineering",
+    href: "https://x.ai/bot/bnmJVg0uwwUZXNXEZd1V5",
+    source: "Shubham",
+    date: "2026-09-02",
+    excerpt: "Motion from the real animation spec. Localhost playground.",
+  },
+  {
+    slug: "mixey",
+    title: "Mixey",
+    kind: "template",
+    collection: "templates",
+    group: "engineering",
+    href: "https://x.ai/bot/2ouhKJbsp2iffYxupTD0Y",
+    source: "Shubham",
+    date: "2026-09-02",
+    excerpt: "Mixpanel events, funnels, retention. Never invents stats.",
+  },
   {
     slug: "loom",
     title: "loom",
@@ -420,6 +443,18 @@ const guides: Guide[] = [
     source: "Krista Letz · @kristaletz",
     date: "2026-09-02",
     excerpt: "Call notes to slides.",
+  },
+
+  {
+    slug: "pre-call-intelligence",
+    title: "Pre-Call Intelligence",
+    kind: "template",
+    collection: "templates",
+    group: "ops",
+    href: "https://x.ai/bot/yQRbVJ7aZL2DyPAWulXn7",
+    source: "Eric Siu",
+    date: "2026-09-02",
+    excerpt: "Read-only meeting card. Drafts follow-ups, never sends.",
   },
   {
     slug: "share-templates",
