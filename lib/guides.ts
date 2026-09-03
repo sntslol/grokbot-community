@@ -149,6 +149,18 @@ const guides: Guide[] = [
       "SpaceXAI engineer building Grok Bot with Grok Bot; a highly capable engineering intern that can manage coding agents.",
   },
   {
+    slug: "a-deep-dive-into-grok-bot",
+    title: "A deep dive into Grok Bot",
+    kind: "guide",
+    collection: "teams",
+    group: "engineering",
+    href: "https://flaviocopes.com/grok-bot/",
+    source: "Flavio Copes · community",
+    date: "2026-09-02",
+    excerpt:
+      "A hands-on guide to Grok Bot, including shared-computer trust boundaries, failure modes, and security.",
+  },
+  {
     slug: "grok-bot-for-support",
     title: "Grok Bot for Support",
     kind: "guide",
@@ -455,6 +467,18 @@ const guides: Guide[] = [
     source: "Eric Siu",
     date: "2026-09-02",
     excerpt: "Read-only meeting card. Drafts follow-ups, never sends.",
+  },
+  {
+    slug: "talent-bot",
+    title: "Talent Bot",
+    kind: "template",
+    collection: "templates",
+    group: "ops",
+    href: "https://x.ai/bot/P2cMMcajyHuHZ4OsZOWfe",
+    source: "Skills Dojo",
+    date: "2026-09-03",
+    excerpt:
+      "Evidence-first recruiting. Frozen role pack, inbound review, no ATS writes or auto-send.",
   },
   {
     slug: "share-templates",
