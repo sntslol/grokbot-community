@@ -524,6 +524,28 @@ const guides: Guide[] = [
     date: "2026-09-06",
     excerpt: "Draft-only X growth for one locked handle. Never posts.",
   },
+  {
+    slug: "whatsapp-bot",
+    title: "WhatsApp-Bot",
+    kind: "template",
+    collection: "templates",
+    group: "ops",
+    href: "https://x.ai/bot/t-Axu4DmT9x2DEPa1eNW1",
+    source: "Alexandre · @alexhawat",
+    date: "2026-09-07",
+    excerpt: "QR-link WhatsApp Web once. List, read, search, send via CDP. No mass messaging.",
+  },
+  {
+    slug: "discogs-bot",
+    title: "Discogs-Bot",
+    kind: "template",
+    collection: "templates",
+    group: "ops",
+    href: "https://x.ai/bot/m5Xjk7EhNokKF49YF9XuW",
+    source: "Alexandre · @alexhawat",
+    date: "2026-09-07",
+    excerpt: "Collection, wantlist, marketplace. Confirm gates on cart and orders.",
+  },
 
   {
     slug: "share-templates",
