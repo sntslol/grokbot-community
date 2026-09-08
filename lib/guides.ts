@@ -590,6 +590,28 @@ const guides: Guide[] = [
     date: "2026-09-08",
     excerpt: "Inventories SaaS spend. Evidence-backed savings. Never spends, signs, or sends without you.",
   },
+  {
+    slug: "nightly-audit-engineer",
+    title: "Nightly Audit Engineer",
+    kind: "template",
+    collection: "templates",
+    group: "engineering",
+    href: "https://x.ai/bot/0LLQmzk-yzwHi0zuiV0lC",
+    source: "—",
+    date: "2026-09-08",
+    excerpt: "One cleanup PR per area overnight.",
+  },
+  {
+    slug: "imogen",
+    title: "Imogen",
+    kind: "template",
+    collection: "templates",
+    group: "engineering",
+    href: "https://x.ai/bot/Eeu5NZp62OzQjtlY4ons2",
+    source: "—",
+    date: "2026-09-08",
+    excerpt: "Alt text for the important part of the image.",
+  },
 
   {
     slug: "share-templates",
